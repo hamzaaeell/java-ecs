@@ -33,6 +33,7 @@ jobs:
       - name: Build with Gradle
         working-directory: ./tripmgmt/tripmgmt
         env:
+          CI: true
           HUSKY_SKIP_INSTALL: 1
         run: ./gradlew bootJar -Pprod
 
