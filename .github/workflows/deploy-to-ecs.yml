@@ -7,10 +7,10 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECS_CLUSTER: tripmgmt-cluster 
+  ECS_CLUSTER: your-tripmgmt-cluster  # Update with your cluster name
   CONTAINER_NAME: tripmgmt
-  ECS_SERVICE: tripmgmt-task-service-dbbdq2vl  
-  ECS_TD: .github/workflows/tripmgmt-task-definition.json 
+  ECS_SERVICE: your-tripmgmt-service  # Update with your service name
+  ECS_TD: .github/workflows/tripmgmt-task-definition.json  # Path to your task definition
 
 jobs:
   deploy:
@@ -35,8 +35,7 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          ./gradlew bootJar -Pprod -x npm_install
-          npm install --no-optional
+          npm install -g rimraf
           ./gradlew bootJar -Pprod
 
       - name: Configure AWS credentials
