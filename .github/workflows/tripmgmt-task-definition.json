@@ -1,5 +1,5 @@
 {
-  "family": "tripmgmgmt-task",
+  "family": "tripmgmt-task",
   "networkMode": "awsvpc",
   "requiresCompatibilities": [
     "FARGATE"
