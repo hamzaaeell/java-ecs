@@ -34,7 +34,7 @@ jobs:
         working-directory: ./tripmgmt/tripmgmt
         env:
           CI: true
-          HUSKY_SKIP_INSTALL: 1
+          HUSKY: 0
         run: ./gradlew bootJar -Pprod
 
       - name: Configure AWS credentials
