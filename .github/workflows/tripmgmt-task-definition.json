@@ -7,7 +7,7 @@
   "cpu": "512",
   "memory": "1024",
   "executionRoleArn": "arn:aws:iam::891612582051:role/ecsTaskExecutionRole",
-  "taskRoleArn": "arn:aws:iam::891612582051:role/ecsTaskRole",
+  "taskRoleArn": "arn:aws:iam::891612582051:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "cpu": 512,
