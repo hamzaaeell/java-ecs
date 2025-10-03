@@ -17,6 +17,6 @@ RUN java -version && uname -m
 
 USER jhipster
 
-ENTRYPOINT ["java", "-cp", "/home/jhipster/app.jar:/home/jhipster/postgresql.jar", "-jar", "/home/jhipster/app.jar"]
+ENTRYPOINT ["java", "-jar", "/home/jhipster/app.jar"]
 
 EXPOSE 8080

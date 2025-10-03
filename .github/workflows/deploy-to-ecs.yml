@@ -29,6 +29,11 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
+      
+      - name: Build frontend
+        working-directory: ./tripmgmt/tripmgmt
+        run: npm run webapp:build:prod
+
 
       - name: Grant execute permission for gradlew
         run: chmod +x tripmgmt/tripmgmt/gradlew
