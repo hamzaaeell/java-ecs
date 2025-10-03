@@ -7,9 +7,9 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECS_CLUSTER: tripmgmt-cluster  
+  ECS_CLUSTER: monumental-deer-pb8fsb  
   CONTAINER_NAME: tripmgmt
-  ECS_SERVICE: tripmgmt-task-service-dbbdq2vl
+  ECS_SERVICE: ECS-EC2-service-jygu6soi
   ECS_TD: .github/workflows/tripmgmt-task-definition.json
 
 jobs:
