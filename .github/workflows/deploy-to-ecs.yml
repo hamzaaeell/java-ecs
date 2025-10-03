@@ -29,6 +29,18 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.17.0'
+          cache: 'npm'
+          cache-dependency-path: 'tripmgmt/tripmgmt/package-lock.json'
+
+      - name: Install npm dependencies
+        working-directory: ./tripmgmt/tripmgmt
+        run: npm install
+
       
       - name: Build frontend
         working-directory: ./tripmgmt/tripmgmt
