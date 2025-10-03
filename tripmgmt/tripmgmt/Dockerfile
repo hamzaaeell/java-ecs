@@ -13,6 +13,7 @@ WORKDIR /home/jhipster
 COPY build/libs/tripmgmt-0.0.1-SNAPSHOT.jar app.jar
 COPY entrypoint.sh /home/jhipster/
 RUN chmod 755 /home/jhipster/entrypoint.sh && chown jhipster:jhipster /home/jhipster/entrypoint.sh
+RUN java -version && uname -m
 
 USER jhipster
 

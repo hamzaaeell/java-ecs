@@ -60,7 +60,7 @@ jobs:
           ECR_REPOSITORY: "comfortable-shark/tripmgmt"
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f tripmgmt/tripmgmt/Dockerfile tripmgmt/tripmgmt/
+          docker build --platform linux/amd64 -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -f tripmgmt/tripmgmt/Dockerfile tripmgmt/tripmgmt/
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           echo "IMAGE=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_ENV
 

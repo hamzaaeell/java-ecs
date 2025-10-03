@@ -1,8 +1,8 @@
 {
-  "family": "tripmgmt-task",
+  "family": "ECS-EC2",
   "networkMode": "awsvpc",
   "requiresCompatibilities": [
-    "FARGATE"
+    "EC2"
   ],
   "cpu": "512",
   "memory": "1024",
